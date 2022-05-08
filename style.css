@@ -1,5 +1,14 @@
-svg {
+#heat-map-svg {
     height: 80vh;
     width: 100vw;
     background-color: antiquewhite;
+}
+#legend-svg {
+    height: 5vh;
+    width: 100vw;
+    background-color: antiquewhite;
+}
+#tooltip {
+    height: auto;
+    width: auto;
 }
