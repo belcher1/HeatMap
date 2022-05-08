@@ -16,9 +16,7 @@ let padding = 100;
 
 let svg = d3.select('#heat-map')
                 .append('svg')
-                .attr('id', 'heat-map-svg');
-
-let tooltip = d3.select('#tooltip');                
+                .attr('id', 'heat-map-svg');              
 
 req.open('GET', url, true);
 req.send();
@@ -97,8 +95,6 @@ req.onload = () => {
         .attr("y", (d) => yScale(new Date(0, d.month - 1, 0, 0, 0, 0, 0)))
         .attr("width", (width - padding * 2) / (maxYear - minYear))
         .attr("x", (d) => xScale(d.year))
-        .on("mouseover", d => tooltip.text("Year: " + d.year))
-        .on("mouseout", tooltip.text("tooltip"))
     
     let legendArr = [
         {color: "rgb(69, 117, 180)", text:"var < 1.5"},
